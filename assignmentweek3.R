@@ -1,3 +1,4 @@
+## This function will create a special object that stores a matrix and caches its inverse
 makeCacheMatrix <- function(x = matrix()) {
     j <- NULL
     set <- function(y){
@@ -5,7 +6,7 @@ makeCacheMatrix <- function(x = matrix()) {
         j <<- NULL
     }
     get <- function()x
-    setInverse <- function(inverse) j <<- inverse
+    setInverse <- function(inverse) j <<- inverse ##set the value of matrix
     getInverse <- function() j 
     list(set = set, get = get, 
          setInverse = setInverse, 
